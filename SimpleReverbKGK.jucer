@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="D4o0J5" name="SimpleReverbKGK" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="Fpo5jF" name="SimpleReverbKGK">
+    <GROUP id="{8CB1E84E-ECB5-5C37-2D7E-A01EFCC0D7DE}" name="Source">
+      <GROUP id="{97A32C9A-A427-A24C-8B76-FC7D1069F019}" name="DSP">
+        <FILE id="cfDNEp" name="KgkAudioTools.cpp" compile="1" resource="0"
+              file="Source/dsp/KgkAudioTools.cpp"/>
+        <FILE id="RK204G" name="KgkAudioTools.h" compile="0" resource="0" file="Source/dsp/KgkAudioTools.h"/>
+        <FILE id="iplRpi" name="NoiseGenerator.cpp" compile="1" resource="0"
+              file="Source/dsp/NoiseGenerator.cpp"/>
+        <FILE id="KfITKh" name="NoiseGenerator.h" compile="0" resource="0"
+              file="Source/dsp/NoiseGenerator.h"/>
+        <FILE id="Wi3mHg" name="ReverbProcessor.cpp" compile="1" resource="0"
+              file="Source/DSP/ReverbProcessor.cpp"/>
+        <FILE id="LQXFse" name="ReverbProcessor.h" compile="0" resource="0"
+              file="Source/DSP/ReverbProcessor.h"/>
+      </GROUP>
+      <FILE id="IvzWuv" name="AppEditor.cpp" compile="1" resource="0" file="Source/AppEditor.cpp"/>
+      <FILE id="RSmhio" name="AppEditor.h" compile="0" resource="0" file="Source/AppEditor.h"/>
+      <FILE id="LI9seA" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="oF7X9C" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="OXpMux" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="SimpleReverbKGK"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="SimpleReverbKGK"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
