@@ -6,10 +6,10 @@
 MainComponent::MainComponent()
 {
     // Add child components
-    // ...addChild()...
+    addAndMakeVisible(&noiseGen);
 
     // Set component size 
-    setSize (400, 600);
+    setSize(400, 600);
 
     // Request permissions to open input channels 
     if (juce::RuntimePermissions::isRequired (juce::RuntimePermissions::recordAudio)
@@ -44,8 +44,8 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 {
     juce::String msg;
     msg << "Preparing to play audio.\n";
-    msg << "samplesPerBlockExpected: \n" << samplesPerBlockExpected << "\n";
-    msg << "sampleRate: \n" << sampleRate << "\n";
+    msg << "samplesPerBlockExpected: " << samplesPerBlockExpected << "\n";
+    msg << "sampleRate: " << sampleRate << "\n";
     juce::Logger::getCurrentLogger()->writeToLog(msg);
 }
 
@@ -56,7 +56,7 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 ///     { AudioSampleBuffer* buffer, int startSample, int numSamples }.</param>
 void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& bufferToFill)
 {
-    noiseGen.addNoiseToBuffer(bufferToFill, 0.25f);
+    noiseGen.addNoiseToBuffer(bufferToFill);
 }
 
 /// <summary>
@@ -78,6 +78,7 @@ void MainComponent::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+    noiseGen.paint(g);
 }
 
 /// <summary>
@@ -85,4 +86,5 @@ void MainComponent::paint (juce::Graphics& g)
 /// </summary>
 void MainComponent::resized()
 {
+    noiseGen.resized();
 }
