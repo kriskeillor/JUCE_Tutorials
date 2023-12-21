@@ -1,0 +1,5 @@
+**/JuceLibraryCode/**
+**/Builds/**/Debug/**
+**/Builds/**/Release/**
+**/Builds/**/FileContentIndex/**
+**/Builds/**/.vs/**
